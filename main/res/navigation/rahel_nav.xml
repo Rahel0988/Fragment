@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rahel_nav"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="rahel.weldemariyam.com.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginscreenFragment"
+            app:destination="@id/loginscreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginscreenFragment"
+        android:name="rahel.weldemariyam.com.LoginscreenFragment"
+        android:label="fragment_loginscreen"
+        tools:layout="@layout/fragment_loginscreen" >
+        <action
+            android:id="@+id/action_loginscreenFragment_to_forget_passwordFragment"
+            app:destination="@id/forget_passwordFragment" />
+        <action
+            android:id="@+id/action_loginscreenFragment_to_register_formFragment"
+            app:destination="@id/register_formFragment" />
+        <action
+            android:id="@+id/action_loginscreenFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="rahel.weldemariyam.com.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_loginscreenFragment"
+            app:destination="@id/loginscreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/register_formFragment"
+        android:name="rahel.weldemariyam.com.Register_formFragment"
+        android:label="fragment_register_form"
+        tools:layout="@layout/fragment_register_form" >
+        <action
+            android:id="@+id/action_register_formFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/forget_passwordFragment"
+        android:name="rahel.weldemariyam.com.Forget_passwordFragment"
+        android:label="fragment_forget_password"
+        tools:layout="@layout/fragment_forget_password" >
+        <action
+            android:id="@+id/action_forget_passwordFragment_to_loginscreenFragment"
+            app:destination="@id/loginscreenFragment" />
+    </fragment>
+</navigation>
